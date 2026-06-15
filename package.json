@@ -5,7 +5,9 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "node --watch src/app.js"
+    "dev": "node --watch src/app.js",
+    "test": "npm run test:path-coverage",
+    "test:path-coverage": "mocha \"test/pathCoverage/**/*.spec.js\" --timeout 10000 --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=path-coverage,quiet=true,overwrite=true,html=true,json=true"
   },
   "keywords": ["express", "ecommerce", "rest-api", "jwt"],
   "license": "MIT",
@@ -15,5 +17,11 @@
     "js-yaml": "^4.1.0",
     "jsonwebtoken": "^9.0.2",
     "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^10.8.2",
+    "mochawesome": "^7.1.3",
+    "supertest": "^7.1.1"
   }
 }
