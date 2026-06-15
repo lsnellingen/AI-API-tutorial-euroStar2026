@@ -1,0 +1,17 @@
+{
+  "name": "ecommerce-rest-api",
+  "version": "1.0.0",
+  "description": "In-memory e-commerce REST API with JWT authentication and checkout",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": ["express", "ecommerce", "rest-api", "jwt"],
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
